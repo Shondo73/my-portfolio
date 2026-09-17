@@ -2,48 +2,50 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Проект 1</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Проект 1: Судоку-помощник</title>
+    <!-- Если index.html в корне сайта, путь css/style.css. Если в подпапке — поправь -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
-      <h1>Проект 1</h1>
-      <input value="810230005309100004060000000020000060000007020090003001000000500000805046008040100" id="imp1" type="text">
-      <div>
-        <table id="table">
-        <!--script defer src="jquery.js"></script-->
-        </table>
-      </div>
-      <div>
-          <table id="table1">
-          <!--script defer src="jquery.js"></script-->
-          </table>
-      </div>
-      <div>
-          <table id="table2">
-          <!--script defer src="jquery.js"></script-->
-          </table>
-      </div>
-      <button id="button1">вероятные числа</button>
-      <button id="button2">сокрашение вероятных чисел</button>
-      <button id="button">Убрать</button>
-      <!--input id="button5" type="submit"-->
-      <button id="mass00">проверка массива</button>
-      <button id="option1">вариант 1</button>
-      <button id="option2">вариант 2</button>
-      <button id="option3">вариант 3</button>
-      <button id="option4">вариант 1</button>
+      <h1>Проект 1: Судоку-помощник</h1>
+      <nav>
+        <a href="index.html">← На главную</a>
+      </nav>
     </header>
+
     <main>
-      <section>
-        <p>Описание проекта 1: что он делает, какие технологии использованы, ссылка на репозиторий и т.п.</p>
-        <!-- сюда можно добавить скриншоты -->
+      <section class="sudoku-controls">
+        <p>Введите строку из 81 цифры (0 — пустая клетка):</p>
+        <!-- value можно оставить для теста, но лучше очистить для реального использования -->
+        <input
+          value="810230005309100004060000000020000060000007020090003001000000500000805046008040100"
+          id="imp1"
+          type="text"
+          placeholder="81 цифра: 000...000"
+        >
+      </section>
+
+      <section class="sudoku-board">
+        <table id="table"></table>
+      </section>
+
+      <section class="sudoku-actions">
+        <button id="button1">Показать вероятные числа</button>
+        <button id="button2">Сократить вероятности</button>
+        <button id="button">Убрать подсказки</button>
+        <button id="mass00">Проверить массив на ошибки</button>
+        <button id="option1">Вариант 1</button>
+        <button id="option2">Вариант 2</button>
+        <button id="option3">Вариант 3</button>
       </section>
     </main>
+
     <footer>
-      <a href="../index.html">← На главную</a>
+      <p>Проект 1 — судоку-помощник на чистом JavaScript.</p>
     </footer>
-    <script src = 'js/script.js'></script>
+
+    <!-- Подключаем скрипт в конце body -->
+    <script src="js/script.js"></script>
   </body>
 </html>
-
