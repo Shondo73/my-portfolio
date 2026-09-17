@@ -76,7 +76,7 @@ function renderTable(tableEl, mas) {
   }
 }
 //
-$(ver3).css('border-left-width', '2px');
+// $(ver3).css('border-left-width', '2px');
 //
 const elem = document.querySelector('#imp1');
 const table = document.querySelector('#table');
