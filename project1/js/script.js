@@ -37,6 +37,7 @@ function possibilit(ver, hor, squa) {
       possibility.push(String(n));
     }
   }
+  console.log(possibility);
   return possibility;
 }
 
