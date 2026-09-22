@@ -141,7 +141,7 @@ function updateProbabilities() {
       }
     }
   }
-console.log
+console.log(array_of_probabilities);
 }
 
 function findSingles() {
