@@ -200,3 +200,32 @@ function checkValid(mas) {
   }
   return true;
 }
+let button1 = document.querySelector('#button1');
+button1.addEventListener('click', function() {
+  updateProbabilities()
+});
+
+
+  /*
+  let ind = [];
+  for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (mas2[i][j] ===0) {
+                ind.push([i,j]);
+                let hor1 = hori(mas2,i);//i вертикаль
+                //console.log(hor1);
+                let ver1 = vert(mas2,j);//j горизонталь
+                //console.log(ver1);
+                let squa1 = squar(mas2,i,j); //квадрат
+                //console.log(squa1);
+                possibilit1 = possibilit(ver1, hor1, squa1);
+                //print(possibilit1);
+    //
+    
+                cracs (i,j,possibilit1);
+
+            }
+        }    
+    } 
+  */          
+
