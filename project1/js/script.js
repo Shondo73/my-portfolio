@@ -243,7 +243,25 @@ button1.addEventListener('click', function() {
   console.log('+++++')
   updateProbabilities()
 });
+//исправленый 
+function cracsa(f, d) {
+  // Защита от некорректных входных данных
+  if (typeof f !== 'number' || typeof d !== 'number') return;
 
+  const cellId = '#a' + f + d;
+  const tableSelector = cellId + ' table';
+
+  const $cell = $(cellId);
+  const $table = $(tableSelector);
+
+  // Удаляем .mig только внутри этой таблицы
+  $table.find('.mig').remove();
+
+  // Если .mag и .mic должны быть только в этой области — удаляем локально
+  $cell.find('.mag, .mic').remove();
+  // Или, если они могут быть и вне ячейки, но всё равно нужно удалить только в контексте таблицы:
+  // $table.find('.mag, .mic').remove();
+}
 
   /*
   let ind = [];

@@ -1053,7 +1053,7 @@ function cracs (f,d,mas) {
         //
         
         //удаление таблицы
-function cracsa (f,d,) { 
+function cracsa (f,d) { 
     let ff = '#'+'a'+String(f)+String(d);
     let ffa = '#'+'a'+String(f)+String(d)+' table';
     $(ffa).remove(".mig");
