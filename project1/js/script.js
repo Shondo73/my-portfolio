@@ -164,6 +164,44 @@ function findSingles() {
   }
 }
 // 
+function findSingles1() {
+  let changed = true;
+
+  while (changed) {
+    changed = false;
+    const rows = array_of_probabilities.length;
+    if (rows === 0) return;
+
+    const cols = array_of_probabilities[0].length;
+
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
+        const cell = array_of_probabilities[i][j];
+
+        // Проверяем, что это массив и в нём ровно один элемент
+        if (Array.isArray(cell) && cell.length === 1) {
+          const value = Number(cell[0]);
+
+          // Если значение уже записано, пропускаем
+          if (mas2[i][j] === value) continue;
+
+          mas2[i][j] = value;
+          changed = true; // состояние изменилось — нужно пересчитать вероятности
+
+          // Обновляем ячейку в таблице (можно вынести в отдельный пакетный апдейт)
+          const td = document.getElementById('a' + i + j);
+          if (td) td.textContent = value;
+        }
+      }
+    }
+
+    // Пересчитываем вероятности только если что-то изменилось
+    if (changed) {
+      updateProbabilities();
+    }
+  }
+}
+
 // Проверка на ошибки (исправленная версия)
     // Упростим errork, чтобы она реально проверяла строки, столбцы и квадраты без дубликатов:
 function checkValid(mas) {

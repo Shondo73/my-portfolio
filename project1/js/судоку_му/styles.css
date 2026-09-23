@@ -1,0 +1,57 @@
+* {
+	margin: 0%;
+	padding: 0%;
+}
+
+#table td {
+	border: 1px solid black;
+
+    width: 62px;
+	height: 62px;
+	text-align: center;
+	font-size: 40px;
+	
+	border: 1px solid green;
+	margin: 1px;
+	padding: 1px;
+}
+#input {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	font-size: 40px;
+}
+
+#bra td{
+	width: 19px;
+	height: 19px;
+	font-size: 15px;
+	border: 1px solid rgb(255, 246, 246);
+}
+ 
+#imp1 {
+	width: 600px;
+	height: 30px;
+	padding: 1px;
+	border: 1px solid black;
+	font-size: 25px;
+}  
+.mic {
+	
+
+    width: 15px;
+	height: 15px;
+	text-align: center;
+	font-size: 12px;
+	
+	border: 1px solid rgb(234, 241, 234);
+	margin: 1px;
+	padding: 1px;
+}
+
+td #a02, #a12, #a22, #a32, #a42, #a52, #a62, #a72, #a82 {
+	border-left-color:black;
+	border-left-width: 2px;
+	border-left-style:solid;
+
+}

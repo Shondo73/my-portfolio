@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>судоку</title>
+    <link rel="stylesheet" href="styles.css">
+</head>   
+<body>
+    <input value="004080002006001090030040506000007300700820000890000000060000005100006400300000010" id="imp1" type="text">
+    <input value="004080002006001090030040506000007300700820000890000000060000005100006400300000010" id="imp2" type="text">
+    <table id="table">
+        <tr>
+            <td>1</td><td>2</td><td>3</td>
+        </tr>
+        <tr>
+            <td>4</td><td>5</td><td>6</td>
+        </tr>
+        <tr>
+            <td>7</td><td>8</td>
+            <td >
+                <table id="bra">
+                    <tr>
+                        <td> 1</td><td> 2</td><td> 3</td>
+                    </tr>
+                    <tr>
+                        <td> 4</td><td> 5</td><td> 6</td>
+                    </tr>
+                    <tr>
+                        <td> 7</td><td> 8</td><td id = 22> 9</td>
+                    </tr>
+                    
+                </table>  
+            </td>
+        </tr>
+        <input id="a" type="text">
+    </table>
+
+    <div class="box">
+    
+        <button>Отправить</button>
+    </div> 
+     
+    
+     
+    <script>
+        function tableCreate(u){
+        var body = document.body,
+            tbl  = document.createElement('table');
+            tbl.setAttribute("id", "myTable");
+        tbl.style.width  = '100px';
+        tbl.style.border = '1px solid black';
+    
+        for(var i = 0; i < u; i++){
+            var tr = tbl.insertRow();
+            
+            for(var j = 0; j < u; j++){
+                    
+                    var td = tr.insertCell();
+                    
+                    var input = document.createElement('input');
+                    input.type = "text";
+                    input.style.width  = '50px';
+                    input.value = "0";
+                    
+                    input.setAttribute("id", String(i)+String(j));
+                    td.appendChild(input);
+                    td.style.border = '1px solid black';
+                   
+            }
+        }
+        body.appendChild(tbl);
+    }
+    
+    tableCreate(4);
+    </script>
+</body> 
+</html>
