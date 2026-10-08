@@ -123,12 +123,12 @@ elem.addEventListener('blur', () => {
   }
 
   renderTable(table, mas2);
-  updateProbabilities();
+  
 });
 
 //  У тебя в коде было mas.split('') и цикл с a=a+1 — это работает, но лучше сразу проверять формат и заполнять.
-// 
-function updateProbabilities() {
+// создание массива с вероятностями array_of_probabilities[]
+function updateProbabilities(mas2, array_of_probabilities ) {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (mas2[i][j] === 0) {
@@ -141,9 +141,10 @@ function updateProbabilities() {
       }
     }
   }
-console.log(array_of_probabilities);
+  console.log(array_of_probabilities);
+  return array_of_probabilities
 }
-
+// 
 function findSingles() {
   let found = false;
   for (let i = 0; i < 9; i++) {
@@ -196,9 +197,9 @@ function findSingles1() {
     }
 
     // Пересчитываем вероятности только если что-то изменилось
-    if (changed) {
+    /*if (changed) {
       updateProbabilities();
-    }
+    }*/
   }
 }
 
@@ -240,8 +241,7 @@ function checkValid(mas) {
 }
 let button1 = document.querySelector('#button1');
 button1.addEventListener('click', function() {
-  console.log('+++++')
-  updateProbabilities()
+  const arr77 = updateProbabilities(mas2, array_of_probabilities);
 });
 //исправленый 
 function cracsa(f, d) {
@@ -262,27 +262,4 @@ function cracsa(f, d) {
   // Или, если они могут быть и вне ячейки, но всё равно нужно удалить только в контексте таблицы:
   // $table.find('.mag, .mic').remove();
 }
-
-  /*
-  let ind = [];
-  for (let i = 0; i < 9; i++) {
-        for (let j = 0; j < 9; j++) {
-            if (mas2[i][j] ===0) {
-                ind.push([i,j]);
-                let hor1 = hori(mas2,i);//i вертикаль
-                //console.log(hor1);
-                let ver1 = vert(mas2,j);//j горизонталь
-                //console.log(ver1);
-                let squa1 = squar(mas2,i,j); //квадрат
-                //console.log(squa1);
-                possibilit1 = possibilit(ver1, hor1, squa1);
-                //print(possibilit1);
-    //
-    
-                cracs (i,j,possibilit1);
-
-            }
-        }    
-    } 
-  */          
 
